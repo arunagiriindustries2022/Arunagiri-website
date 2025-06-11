@@ -62,4 +62,48 @@
     background: #F5EFE6;
     color: #1E1E1E;
   }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+    letter-spacing: -0.025em;
+    font-weight: 500;
+    line-height: 1.1;
+  }
+  
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+  }
+  
+  h3 {
+    font-size: 1.75rem;
+  }
+  
+  p {
+    font-weight: 400;
+    line-height: 1.7;
+  }
+  
+  /* Section backgrounds with elegant gradients */
+  section {
+    background-color: #F5EFE6;
+  }
+  
+  section:nth-of-type(odd) {
+    background: linear-gradient(to right, #F5EFE6, #F9F7F4, #F5EFE6);
+  }
+  
+  section:nth-of-type(even) {
+    background: linear-gradient(to right, #E7DFD6, #F5EFE6, #E7DFD6);
+  }
+  
+  button, .button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.025em;
+  }
 }
