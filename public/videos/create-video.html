@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Video File</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    code {
+      background: #f4f4f4;
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+    h1 {
+      color: #333;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Creating the Manufacturing Video</h1>
+  
+  <p>To make the hero section video work properly, you need to create a video file named "manufacturing-showcase.mp4" in the public/videos directory.</p>
+  
+  <h2>Option 1: Create from the hero image</h2>
+  <p>If you have FFmpeg installed, you can create a video from the existing hero image with this command:</p>
+  <pre>ffmpeg -loop 1 -i ../images/hero-background.jpg -c:v libx264 -t 10 -pix_fmt yuv420p manufacturing-showcase.mp4</pre>
+  <p>This creates a 10-second loop of the image.</p>
+  
+  <h2>Option 2: Download a free manufacturing video</h2>
+  <p>You can download a free manufacturing video from stock video sites like:</p>
+  <ul>
+    <li><a href="https://www.pexels.com/search/videos/manufacturing/" target="_blank">Pexels</a></li>
+    <li><a href="https://pixabay.com/videos/search/manufacturing/" target="_blank">Pixabay</a></li>
+    <li><a href="https://www.videvo.net/stock-video-footage/manufacturing/" target="_blank">Videvo</a></li>
+  </ul>
+  <p>After downloading, rename it to "manufacturing-showcase.mp4" and place it in the public/videos directory.</p>
+</body>
+</html> 

@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 30 33% 93%;
+    --foreground: 28 30% 13%;
+
+    --card: 30 33% 99%;
+    --card-foreground: 28 30% 13%;
+ 
+    --popover: 30 33% 99%;
+    --popover-foreground: 28 30% 13%;
+ 
+    --primary: 22 50% 31%;
+    --primary-foreground: 30 33% 99%;
+ 
+    --secondary: 21 25% 67%;
+    --secondary-foreground: 28 30% 13%;
+ 
+    --muted: 27 13% 84%;
+    --muted-foreground: 20 10% 40%;
+ 
+    --accent: 20 30% 60%;
+    --accent-foreground: 30 33% 99%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 27 13% 84%;
+    --input: 27 13% 84%;
+    --ring: 22 50% 31%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 28 30% 13%;
+    --foreground: 30 33% 93%;
+ 
+    --card: 28 30% 13%;
+    --card-foreground: 30 33% 93%;
+ 
+    --popover: 28 30% 13%;
+    --popover-foreground: 30 33% 93%;
+ 
+    --primary: 22 50% 31%;
+    --primary-foreground: 30 33% 93%;
+ 
+    --secondary: 21 25% 67%;
+    --secondary-foreground: 28 30% 13%;
+ 
+    --muted: 27 13% 25%;
+    --muted-foreground: 30 33% 80%;
+ 
+    --accent: 20 30% 60%;
+    --accent-foreground: 30 33% 93%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 30 33% 93%;
+ 
+    --border: 27 13% 25%;
+    --input: 27 13% 25%;
+    --ring: 27 13% 80%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Montserrat", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #F5EFE6;
+    color: #1E1E1E;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+    letter-spacing: -0.025em;
+    font-weight: 500;
+    line-height: 1.1;
+  }
+  
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+  }
+  
+  h3 {
+    font-size: 1.75rem;
+  }
+  
+  p {
+    font-weight: 400;
+    line-height: 1.7;
+  }
+  
+  /* Section backgrounds with elegant gradients */
+  section {
+    background-color: #F5EFE6;
+  }
+  
+  section:nth-of-type(odd) {
+    background: linear-gradient(to right, #F5EFE6, #F9F7F4, #F5EFE6);
+  }
+  
+  section:nth-of-type(even) {
+    background: linear-gradient(to right, #E7DFD6, #F5EFE6, #E7DFD6);
+  }
+  
+  button, .button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.025em;
+  }
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  .bg-warm-gradient {
+    background: linear-gradient(135deg, #F5EFE6 0%, #D0B9A7 100%);
+  }
+  
+  .bg-tan-gradient {
+    background: linear-gradient(135deg, #E7DFD6 0%, #B5A192 100%);
+  }
+  
+  .bg-brown-gradient {
+    background: linear-gradient(135deg, #B9937B 0%, #714329 100%);
+  }
+  
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(45deg, #714329, #B08463);
+  }
+}
+
+/* Custom video slider */
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #714329;
+  cursor: pointer;
+  border: 2px solid #F5EFE6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.slider::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #714329;
+  cursor: pointer;
+  border: 2px solid #F5EFE6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5EFE6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B08463;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #714329;
+}
+
+/* Selection */
+::selection {
+  background: #714329;
+  color: #F5EFE6;
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow,
+    transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(113, 67, 41, 0.15);
+}
+
+/* Elegant button styles */
+.btn-elegant {
+  background-color: #714329;
+  color: #F5EFE6;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  transition: all 0.3s ease;
+}
+
+.btn-elegant:hover {
+  background-color: #B08463;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(113, 67, 41, 0.2);
+}
